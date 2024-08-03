@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diki Somantri</title>
+    <!-- Logo -->
+    <link rel="icon" href="dist/img/logo-no-background.png" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="dist/css/final.css" />
+    <!-- Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Local Storage Theme -->
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header Section Start -->
+    <header
+      class="absolute left-0 top-0 z-10 flex w-full items-center bg-transparent"
+    >
+      <div class="container">
+        <div class="relative flex items-center justify-between">
+          <div class="px-4">
+            <a
+              href="#home"
+              class="block py-6 text-lg font-bold text-primary dark:text-d"
+              >Diki Somantri</a
+            >
+          </div>
+          <div class="flex items-center px-4">
+            <button
+              id="hamburger"
+              name="hamburger"
+              type="button"
+              class="absolute right-4 block lg:hidden"
+            >
+              <span
+                class="hamburger-line origin-top-left transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"
+              ></span>
+            </button>
+            <nav
+              id="nav-menu"
+              class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark dark:shadow-slate-500 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white dark:group-hover:text-d"
+                    >Home</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#about"
+                    class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white dark:group-hover:text-d"
+                    >About Us</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#projects"
+                    class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white dark:group-hover:text-d"
+                    >Projects</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="mailto:diki_somantri@ymail.com"
+                    class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white dark:group-hover:text-d"
+                    >Contact Us</a
+                  >
+                </li>
+                <li class="mt-3 flex items-center pl-8 lg:mt-0">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-slate-500">Light </span>
+                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div
+                        class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1"
+                      >
+                        <div
+                          class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"
+                        ></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-slate-500">Dark </span>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header Section End -->
+    <main>
+      <!-- Hero Section Start -->
+      <section id="home" class="pb-28 pt-32 dark:bg-dark">
+        <div class="container">
+          <div class="flex flex-wrap">
+            <div class="w-full px-4 xs:w-1/2 lg:w-1/3">
+              <div class="mt-10 lg:right-0 lg:mt-9">
+                <img
+                  src="dist/img/profilePic.png"
+                  alt="Diki Somantri"
+                  class="mx-auto max-w-full rounded-2xl bg-primary dark:bg-d"
+                />
+              </div>
+            </div>
+            <div class="w-full self-center px-4 xs:w-1/2 lg:w-2/3">
+              <h1
+                class="text-base font-semibold text-primary dark:text-d md:text-xl lg:text-2xl"
+              >
+                Hello Everyone, I'am<span
+                  class="mt-1 block text-4xl font-bold text-slate-900 dark:text-white lg:text-5xl"
+                  ><strong>Diki Somantri</strong></span
+                >
+              </h1>
+              <h2 class="mb-5 text-lg font-medium text-secondary lg:text-2xl">
+                Fullstack Web Developer |
+                <span class="text-dark dark:text-white">Backend Developer</span>
+              </h2>
+              <h3
+                class="mb-1 text-lg font-bold italic text-dark dark:text-white lg:text-2xl"
+              >
+                Bringing Ideas to Life : Weaving Dreams with Code and Design.
+              </h3>
+              <p class="mb-10 font-medium leading-relaxed text-secondary">
+                As a skilled full-stack developer, I am dedicated to turning
+                ideas into innovative web applications. Explore my latest
+                projects, showcasing my expertise in HTML, CSS, JavaScript,
+                ReactJS, NextJS, NodeJS, MongoDB, PHP, MySQL, Git, Laravel,
+                Bootstrap Framework and backend web development.
+              </p>
+              <a
+                href="https://bit.ly/CVATSEN"
+                class="rounded-full bg-primary px-6 py-2 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:bg-d"
+                target="_blank"
+                >Resume</a
+              >
+              <a
+                href="mailto:diki_somantri@ymail.com"
+                class="ml-3 text-base font-semibold text-primary underline-offset-2 hover:underline dark:text-d"
+              >
+                Contact</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Hero Section End -->
+      <!-- About Section Start -->
+      <section id="about" class="pb-32 pt-36 dark:bg-dark">
+        <div class="container">
+          <div class="flex flex-wrap">
+            <div class="mb-10 w-full px-4 lg:w-1/2">
+              <h4
+                class="mb-3 text-lg font-bold uppercase text-primary dark:text-d"
+              >
+                About Me
+              </h4>
+              <h2
+                class="bold mb-5 max-w-md text-3xl text-dark dark:text-white lg:text-4xl"
+              >
+                Biography
+              </h2>
+              <p
+                id="biography"
+                class="max-w-xl text-base font-medium text-secondary"
+              ></p>
+            </div>
+            <div class="w-full px-4 lg:w-1/2">
+              <h3
+                class="mb-2 text-2xl font-semibold text-dark dark:text-white lg:pt-10 lg:text-3xl"
+              >
+                Soft Skills
+              </h3>
+              <div class="flex items-center">
+                <ul
+                  id="soft-skills-list"
+                  class="max-w-xl list-inside list-[square] text-base font-medium text-secondary"
+                ></ul>
+              </div>
+              <h3
+                class="mb-2 text-2xl font-semibold text-dark dark:text-white lg:pt-2 lg:text-3xl"
+              >
+                Courses, Training and Certifications
+              </h3>
+              <div class="flex items-center">
+                <table
+                  id="courses-table"
+                  class="max-w-xl table-auto border-2 border-primary text-base font-medium text-dark dark:text-secondary"
+                ></table>
+              </div>
+              <h3
+                class="mb-2 text-2xl font-semibold text-dark dark:text-white lg:pt-4 lg:text-3xl"
+              >
+                Let's become friends.
+              </h3>
+              <div class="flex items-center">
+                <!-- Facebook -->
+                <a
+                  href="https://facebook.com/diksom/"
+                  target="_blank"
+                  class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white dark:hover:border-d dark:hover:bg-d dark:hover:text-dark"
+                >
+                  <svg class="fill-current" width="24" height="24">
+                    <use href="dist/assets/svg/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+                <!-- Twitter -->
+                <a
+                  href="https://twitter.com/Diki_Somantri/"
+                  target="_blank"
+                  class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white dark:hover:border-d dark:hover:bg-d dark:hover:text-dark"
+                >
+                  <svg class="fill-current" width="24" height="24">
+                    <use href="dist/assets/svg/icons.svg#twitter"></use>
+                  </svg>
+                </a>
+                <!-- Instagram -->
+                <a
+                  href="https://www.instagram.com/diki_somantri/"
+                  target="_blank"
+                  class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white dark:hover:border-d dark:hover:bg-d dark:hover:text-dark"
+                >
+                  <svg class="fill-current" width="24" height="24">
+                    <use href="dist/assets/svg/icons.svg#instagram"></use>
+                  </svg>
+                </a>
+                <!-- Github -->
+                <a
+                  href="https://github.com/diki-somantri/"
+                  target="_blank"
+                  class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white dark:hover:border-d dark:hover:bg-d dark:hover:text-dark"
+                >
+                  <svg class="fill-current" width="24" height="24">
+                    <use href="dist/assets/svg/icons.svg#github"></use>
+                  </svg>
+                </a>
+                <!-- LinkedIn -->
+                <a
+                  href="https://www.linkedin.com/in/diki-somantri/"
+                  target="_blank"
+                  class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white dark:hover:border-d dark:hover:bg-d dark:hover:text-dark"
+                >
+                  <svg class="fill-current" width="24" height="24">
+                    <use href="dist/assets/svg/icons.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About Section End -->
+      <!-- Project Section Start -->
+      <section id="projects" class="bg-slate-100 pb-16 pt-36 dark:bg-slate-800">
+        <div class="container relative mx-auto px-4">
+          <div class="w-full">
+            <div class="mx-auto mb-16 max-w-xl text-center">
+              <h4
+                class="dark:text-primary-light mb-2 text-lg font-semibold text-primary"
+              >
+                Projects
+              </h4>
+              <h2
+                class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl"
+              >
+                Some Things I’ve Built
+              </h2>
+              <p class="text-md font-medium text-secondary md:text-lg">
+                Explore the various projects I've worked on, showcasing my
+                skills in web development using different technologies and
+                frameworks. Click on the project to learn more, or visit my
+                GitHub to see more projects I've worked on.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-container relative px-8">
+          <div class="swiper-wrapper" id="projectCards"></div>
+          <div class="swiper-pagination"></div>
+          <!-- Tombol Navigasi -->
+          <div
+            class="swiper-button-next absolute right-4 top-1/2 z-20 -translate-y-1/2 transform text-black hover:text-blue-500"
+          ></div>
+          <div
+            class="swiper-button-prev absolute left-4 top-1/2 z-20 -translate-y-1/2 transform text-black hover:text-blue-500"
+          ></div>
+        </div>
+      </section>
+      <!-- Project Section End -->
+    </main>
+    <!-- Footer Section Start -->
+    <footer class="bg-dark pb-12 pt-24">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="mb-12 w-full px-4 font-medium text-slate-300">
+            <h2 class="mb-5 text-4xl font-bold text-white">
+              <strong>Diki Somantri</strong>
+            </h2>
+            <h3 class="mb-2 text-2xl font-bold">Contact us</h3>
+            <p>diki_somantri@ymail.com</p>
+            <p>
+              Jl. Gunung Lawu GG.II No. 313 Pelita Kel. Dasan Agung Baru
+              Kec.Selaparang Kota Mataram
+            </p>
+            <p>Nusa Tenggara Barat</p>
+          </div>
+        </div>
+        <div class="w-full border-t border-slate-700 pt-10">
+          <div class="mb-5 flex items-center justify-center">
+            <!-- Facebook -->
+            <a
+              href="https://facebook.com/diksom/"
+              target="_blank"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white dark:hover:border-d dark:hover:bg-d dark:hover:text-dark"
+            >
+              <svg class="fill-current" width="24" height="24">
+                <use href="dist/assets/svg/icons.svg#facebook"></use>
+              </svg>
+            </a>
+            <!-- Twitter -->
+            <a
+              href="https://twitter.com/Diki_Somantri/"
+              target="_blank"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white dark:hover:border-d dark:hover:bg-d dark:hover:text-dark"
+            >
+              <svg class="fill-current" width="24" height="24">
+                <use href="dist/assets/svg/icons.svg#twitter"></use>
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a
+              href="https://www.instagram.com/diki_somantri/"
+              target="_blank"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white dark:hover:border-d dark:hover:bg-d dark:hover:text-dark"
+            >
+              <svg class="fill-current" width="24" height="24">
+                <use href="dist/assets/svg/icons.svg#instagram"></use>
+              </svg>
+            </a>
+            <!-- Github -->
+            <a
+              href="https://github.com/diki-somantri/"
+              target="_blank"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white dark:hover:border-d dark:hover:bg-d dark:hover:text-dark"
+            >
+              <svg class="fill-current" width="24" height="24">
+                <use href="dist/assets/svg/icons.svg#github"></use>
+              </svg>
+            </a>
+            <!-- LinkedIn -->
+            <a
+              href="https://www.linkedin.com/in/diki-somantri/"
+              target="_blank"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white dark:hover:border-d dark:hover:bg-d dark:hover:text-dark"
+            >
+              <svg class="fill-current" width="24" height="24">
+                <use href="dist/assets/svg/icons.svg#linkedin"></use>
+              </svg>
+            </a>
+          </div>
+          <p class="text-center text-xs font-medium text-slate-700">
+            Copyright © 2024 - All right reserved | Build with
+            <a
+              href="https://tailwindcss.com"
+              target="_blank"
+              class="font-bold text-sky-500"
+              >Tailwind CSS</a
+            >
+            by
+            <a
+              href="https://www.linkedin.com/in/diki-somantri/"
+              target="_blank"
+              class="font-bold text-primary dark:text-d"
+              >Diki Somantri</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+    <!-- Back To Top Start-->
+    <a
+      href="#home"
+      class="fixed bottom-4 right-4 z-[9999] hidden h-14 w-14 items-center justify-center rounded-full bg-primary p-4 hover:animate-pulse dark:bg-d"
+      id="to-top"
+    >
+      <span class="mt-2 block h-5 w-5 rotate-45 border-l-2 border-t-2"></span>
+    </a>
+    <!-- Back To Top End -->
+    <!-- Javascript -->
+    <script src="dist/js/data/biography.js"></script>
+    <script src="dist/js/data/softSkill.js"></script>
+    <script src="dist/js/data/courses.js"></script>
+    <script src="dist/js/scripts/sectionAbout.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="dist/js/scripts/script.js"></script>
+    <script src="dist/js/data/projects.js"></script>
+    <script src="dist/js/scripts/sectionProject.js"></script>
+  </body>
+</html>
